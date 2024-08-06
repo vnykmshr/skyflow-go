@@ -1,4 +1,4 @@
-module github.com/skyflowapi/skyflow-go/commonutils
+module github.com/vnykmshr/skyflow-go/commonutils
 
 go 1.13
 
