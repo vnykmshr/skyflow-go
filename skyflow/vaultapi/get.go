@@ -61,8 +61,9 @@ func (g *GetApi) doValidations() *errors.SkyflowError {
 	}
 	var recordsArray = (totalRecords).([]interface{})
 	if len(recordsArray) == 0 {
-		logger.Error(fmt.Sprintf(messages.EMPTY_RECORDS, getTag))
-		return errors.NewSkyflowError(errors.ErrorCodesEnum(errors.SdkErrorCode), fmt.Sprintf(messages.EMPTY_RECORDS, getTag))
+		logger.Info(fmt.Sprintf(messages.EMPTY_RECORD_IDS, getTag))
+		// logger.Error(fmt.Sprintf(messages.EMPTY_RECORDS, getTag))
+		// return errors.NewSkyflowError(errors.ErrorCodesEnum(errors.SdkErrorCode), fmt.Sprintf(messages.EMPTY_RECORDS, getTag))
 	}
 	for _, record := range recordsArray {
 		var singleRecord = (record).(map[string]interface{})
