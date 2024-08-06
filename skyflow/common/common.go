@@ -58,6 +58,9 @@ type InsertOptions struct {
 type GetOptions struct {
 	Context context.Context
 	Tokens  bool
+	
+	Offset  int
+	Limit   int
 }
 
 type DetokenizeOptions struct {
